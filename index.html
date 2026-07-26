@@ -8,6 +8,8 @@
     content="Privacy Policy for the Isnad iOS and iPadOS application."
   >
   <meta name="theme-color" content="#061927">
+  <link rel="icon" type="image/png" href="app-icon.png">
+  <link rel="apple-touch-icon" href="app-icon.png">
   <title>Isnad — Privacy Policy</title>
   <style>
     :root {
@@ -113,20 +115,22 @@
     }
 
     .brand-mark {
-      display: grid;
-      width: 42px;
-      height: 42px;
-      place-items: center;
-      color: var(--gold-bright);
+      display: block;
+      width: 48px;
+      height: 48px;
+      overflow: hidden;
       border: 1px solid var(--border);
       border-radius: 14px;
-      background:
-        radial-gradient(circle at 35% 30%, rgba(255, 219, 134, 0.22), transparent 40%),
-        rgba(5, 31, 34, 0.88);
       box-shadow:
         inset 0 0 0 4px rgba(225, 169, 76, 0.05),
-        0 0 24px rgba(229, 171, 75, 0.12);
-      font-size: 1.05rem;
+        0 0 28px rgba(229, 171, 75, 0.16);
+    }
+
+    .brand-mark img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .language-switcher {
@@ -235,6 +239,14 @@
       font-size: clamp(2.45rem, 8vw, 5rem);
       line-height: 1.02;
       letter-spacing: -0.035em;
+    }
+
+    html[lang="ru"] h1 {
+      max-width: 100%;
+      font-size: clamp(1.8rem, 5vw, 3.55rem);
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+      overflow-wrap: anywhere;
     }
 
     .hero-description {
@@ -459,8 +471,8 @@
       }
 
       .brand-mark {
-        width: 38px;
-        height: 38px;
+        width: 42px;
+        height: 42px;
       }
 
       .language-button {
@@ -497,7 +509,9 @@
   <div class="page">
     <header class="topbar">
       <div class="brand" aria-label="Isnad">
-        <span class="brand-mark" aria-hidden="true">✦</span>
+        <span class="brand-mark">
+          <img src="app-icon.png" alt="" width="48" height="48">
+        </span>
         <span>Isnad</span>
       </div>
 
