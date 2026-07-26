@@ -1,0 +1,1052 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta
+    name="description"
+    content="Privacy Policy for the Isnad iOS and iPadOS application."
+  >
+  <meta name="theme-color" content="#061927">
+  <title>Isnad — Privacy Policy</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --background: #03111d;
+      --background-deep: #020b12;
+      --surface: rgba(8, 39, 43, 0.82);
+      --surface-strong: rgba(9, 47, 49, 0.94);
+      --surface-soft: rgba(255, 255, 255, 0.035);
+      --gold: #efbd5d;
+      --gold-bright: #ffd985;
+      --gold-muted: #ad8441;
+      --text: #f7ecd1;
+      --text-secondary: #c8bea7;
+      --text-muted: #948d7f;
+      --green: #6fc999;
+      --border: rgba(224, 167, 72, 0.54);
+      --border-soft: rgba(224, 167, 72, 0.2);
+      --shadow: 0 22px 70px rgba(0, 0, 0, 0.34);
+      --radius-large: 28px;
+      --radius-medium: 20px;
+      --content-width: 920px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background: var(--background-deep);
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 50% -10%, rgba(17, 79, 91, 0.46), transparent 34rem),
+        radial-gradient(circle at 8% 34%, rgba(225, 167, 68, 0.08), transparent 23rem),
+        radial-gradient(circle at 92% 70%, rgba(32, 118, 111, 0.1), transparent 26rem),
+        linear-gradient(180deg, #071d2d 0%, var(--background) 36%, var(--background-deep) 100%);
+      font-family:
+        Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    body::before {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      content: "";
+      pointer-events: none;
+      opacity: 0.32;
+      background-image:
+        linear-gradient(45deg, transparent 48%, rgba(232, 179, 82, 0.09) 49%, rgba(232, 179, 82, 0.09) 51%, transparent 52%),
+        linear-gradient(-45deg, transparent 48%, rgba(232, 179, 82, 0.09) 49%, rgba(232, 179, 82, 0.09) 51%, transparent 52%);
+      background-size: 46px 46px;
+      mask-image: linear-gradient(to bottom, black, transparent 78%);
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    a {
+      color: var(--gold-bright);
+      text-decoration-color: rgba(255, 217, 133, 0.45);
+      text-underline-offset: 0.2em;
+    }
+
+    a:hover {
+      text-decoration-color: currentColor;
+    }
+
+    .page {
+      width: min(calc(100% - 32px), var(--content-width));
+      margin: 0 auto;
+      padding: 30px 0 54px;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 44px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .brand-mark {
+      display: grid;
+      width: 42px;
+      height: 42px;
+      place-items: center;
+      color: var(--gold-bright);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background:
+        radial-gradient(circle at 35% 30%, rgba(255, 219, 134, 0.22), transparent 40%),
+        rgba(5, 31, 34, 0.88);
+      box-shadow:
+        inset 0 0 0 4px rgba(225, 169, 76, 0.05),
+        0 0 24px rgba(229, 171, 75, 0.12);
+      font-size: 1.05rem;
+    }
+
+    .language-switcher {
+      display: inline-flex;
+      padding: 4px;
+      border: 1px solid var(--border-soft);
+      border-radius: 999px;
+      background: rgba(2, 14, 20, 0.58);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    .language-button {
+      min-width: 50px;
+      min-height: 38px;
+      padding: 7px 14px;
+      color: var(--text-muted);
+      border: 0;
+      border-radius: 999px;
+      background: transparent;
+      font: inherit;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition:
+        color 180ms ease,
+        background 180ms ease,
+        box-shadow 180ms ease;
+    }
+
+    .language-button:hover {
+      color: var(--text);
+    }
+
+    .language-button[aria-pressed="true"] {
+      color: #132019;
+      background: linear-gradient(135deg, var(--gold-bright), var(--gold));
+      box-shadow: 0 6px 22px rgba(239, 189, 93, 0.2);
+    }
+
+    .language-button:focus-visible,
+    a:focus-visible {
+      outline: 3px solid rgba(255, 217, 133, 0.65);
+      outline-offset: 3px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(30px, 6vw, 58px);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-large);
+      background:
+        radial-gradient(circle at 85% 0%, rgba(238, 181, 75, 0.16), transparent 21rem),
+        linear-gradient(145deg, rgba(8, 47, 50, 0.95), rgba(3, 24, 31, 0.94));
+      box-shadow: var(--shadow);
+    }
+
+    .hero::before,
+    .hero::after {
+      position: absolute;
+      width: 230px;
+      height: 230px;
+      content: "";
+      border: 1px solid rgba(239, 189, 93, 0.12);
+      border-radius: 50%;
+    }
+
+    .hero::before {
+      top: -138px;
+      right: -80px;
+      box-shadow:
+        0 0 0 26px rgba(239, 189, 93, 0.025),
+        0 0 0 52px rgba(239, 189, 93, 0.018);
+    }
+
+    .hero::after {
+      bottom: -175px;
+      left: -95px;
+      box-shadow: 0 0 0 35px rgba(90, 181, 143, 0.025);
+    }
+
+    .eyebrow {
+      position: relative;
+      z-index: 1;
+      margin: 0 0 12px;
+      color: var(--gold);
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      text-wrap: balance;
+    }
+
+    h1 {
+      position: relative;
+      z-index: 1;
+      max-width: 740px;
+      margin: 0;
+      font-size: clamp(2.45rem, 8vw, 5rem);
+      line-height: 1.02;
+      letter-spacing: -0.035em;
+    }
+
+    .hero-description {
+      position: relative;
+      z-index: 1;
+      max-width: 690px;
+      margin: 22px 0 0;
+      color: var(--text-secondary);
+      font-size: clamp(1rem, 2vw, 1.16rem);
+    }
+
+    .privacy-badges {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 28px;
+    }
+
+    .privacy-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 13px;
+      color: var(--text);
+      border: 1px solid rgba(111, 201, 153, 0.28);
+      border-radius: 999px;
+      background: rgba(6, 31, 31, 0.65);
+      font-size: 0.86rem;
+      font-weight: 650;
+    }
+
+    .privacy-badge::before {
+      width: 7px;
+      height: 7px;
+      content: "";
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 12px rgba(111, 201, 153, 0.65);
+    }
+
+    .effective-date {
+      margin: 16px 0 0;
+      color: var(--text-muted);
+      font-size: 0.84rem;
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin: 20px 0 42px;
+    }
+
+    .summary-card {
+      padding: 22px;
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-medium);
+      background: var(--surface);
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.16);
+    }
+
+    .summary-number {
+      display: grid;
+      width: 34px;
+      height: 34px;
+      margin-bottom: 14px;
+      place-items: center;
+      color: var(--gold-bright);
+      border: 1px solid var(--border);
+      border-radius: 11px;
+      background: rgba(3, 21, 25, 0.7);
+      font-weight: 800;
+    }
+
+    .summary-card h2 {
+      margin: 0 0 6px;
+      font-size: 1.18rem;
+    }
+
+    .summary-card p {
+      margin: 0;
+      color: var(--text-secondary);
+      font-size: 0.94rem;
+    }
+
+    .policy {
+      display: grid;
+      gap: 14px;
+    }
+
+    .section {
+      padding: clamp(22px, 4vw, 32px);
+      border: 1px solid rgba(224, 167, 72, 0.17);
+      border-radius: var(--radius-medium);
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.018), transparent),
+        rgba(3, 24, 31, 0.76);
+    }
+
+    .section h2 {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin: 0 0 13px;
+      color: var(--text);
+      font-size: clamp(1.25rem, 3vw, 1.55rem);
+    }
+
+    .section-index {
+      color: var(--gold);
+      font-family:
+        Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      font-size: 0.75rem;
+      font-weight: 850;
+      letter-spacing: 0.08em;
+    }
+
+    .section p,
+    .section li {
+      color: var(--text-secondary);
+    }
+
+    .section p {
+      margin: 0;
+    }
+
+    .section p + p {
+      margin-top: 12px;
+    }
+
+    .section ul {
+      display: grid;
+      gap: 8px;
+      margin: 14px 0 0;
+      padding-inline-start: 1.3rem;
+    }
+
+    .section li::marker {
+      color: var(--gold);
+    }
+
+    .contact-card {
+      margin-top: 14px;
+      padding: 25px;
+      text-align: center;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-medium);
+      background:
+        radial-gradient(circle at 50% 100%, rgba(232, 178, 83, 0.11), transparent 15rem),
+        var(--surface-strong);
+    }
+
+    .contact-card p {
+      margin: 0 0 12px;
+      color: var(--text-secondary);
+    }
+
+    .contact-link {
+      display: inline-flex;
+      min-height: 46px;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 18px;
+      color: #192018;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--gold-bright), var(--gold));
+      box-shadow: 0 10px 30px rgba(239, 189, 93, 0.17);
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    footer {
+      padding: 30px 0 6px;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      text-align: center;
+    }
+
+    [dir="rtl"] body {
+      font-family: Tahoma, Arial, sans-serif;
+    }
+
+    [dir="rtl"] h1,
+    [dir="rtl"] h2,
+    [dir="rtl"] h3,
+    [dir="rtl"] .brand {
+      font-family: Tahoma, Arial, sans-serif;
+    }
+
+    [dir="rtl"] h1 {
+      letter-spacing: 0;
+      line-height: 1.2;
+    }
+
+    [dir="rtl"] .eyebrow {
+      letter-spacing: 0;
+    }
+
+    [dir="rtl"] .section-index {
+      letter-spacing: 0;
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+
+    @media (max-width: 680px) {
+      .page {
+        width: min(calc(100% - 22px), var(--content-width));
+        padding-top: 18px;
+      }
+
+      .topbar {
+        margin-bottom: 26px;
+      }
+
+      .brand {
+        font-size: 1.16rem;
+      }
+
+      .brand-mark {
+        width: 38px;
+        height: 38px;
+      }
+
+      .language-button {
+        min-width: 43px;
+        min-height: 36px;
+        padding: 6px 10px;
+      }
+
+      .hero {
+        border-radius: 23px;
+      }
+
+      .summary-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <div class="brand" aria-label="Isnad">
+        <span class="brand-mark" aria-hidden="true">✦</span>
+        <span>Isnad</span>
+      </div>
+
+      <nav class="language-switcher" aria-label="Language">
+        <button
+          class="language-button"
+          type="button"
+          data-language="en"
+          aria-pressed="true"
+        >EN</button>
+        <button
+          class="language-button"
+          type="button"
+          data-language="ru"
+          aria-pressed="false"
+        >RU</button>
+        <button
+          class="language-button"
+          type="button"
+          data-language="ar"
+          aria-pressed="false"
+        >AR</button>
+      </nav>
+    </header>
+
+    <main>
+      <article data-language-panel="en">
+        <section class="hero">
+          <p class="eyebrow">Privacy and trust</p>
+          <h1>Privacy Policy</h1>
+          <p class="hero-description">
+            Isnad is designed to keep your reading and study experience private.
+            The app works without an account and does not use advertising,
+            analytics, or tracking technologies.
+          </p>
+          <div class="privacy-badges" aria-label="Privacy highlights">
+            <span class="privacy-badge">No account</span>
+            <span class="privacy-badge">No advertising</span>
+            <span class="privacy-badge">No tracking</span>
+          </div>
+          <p class="effective-date">Effective date: July 26, 2026</p>
+        </section>
+
+        <section class="summary-grid" aria-label="Privacy summary">
+          <article class="summary-card">
+            <span class="summary-number" aria-hidden="true">01</span>
+            <h2>Local by design</h2>
+            <p>
+              Your language, onboarding state, and favorite Names remain in the
+              app’s storage on your device.
+            </p>
+          </article>
+          <article class="summary-card">
+            <span class="summary-number" aria-hidden="true">02</span>
+            <h2>You stay in control</h2>
+            <p>
+              Information leaves the app only when you deliberately open an
+              external link or send a support email.
+            </p>
+          </article>
+        </section>
+
+        <div class="policy">
+          <section class="section">
+            <h2><span class="section-index">01</span>Scope</h2>
+            <p>
+              This Privacy Policy applies to the Isnad application for iOS and
+              iPadOS. It explains what information the app handles, why it is
+              used, how long it is retained, and what choices are available to
+              you.
+            </p>
+          </section>
+
+          <section class="section">
+            <h2><span class="section-index">02</span>Information we collect</h2>
+            <p>
+              Isnad does not automatically collect or transmit personal
+              information. The app does not require registration and does not
+              include third-party advertising or analytics SDKs.
+            </p>
+            <ul>
+              <li>No advertising identifiers or tracking profiles.</li>
+              <li>No location, contacts, photos, microphone, or camera data.</li>
+              <li>No usage analytics or behavioral profiling.</li>
+              <li>No sale or rental of personal information.</li>
+            </ul>
+          </section>
+
+          <section class="section">
+            <h2><span class="section-index">03</span>Information stored on your device</h2>
+            <p>
+              Isnad stores a small amount of preference data locally to provide
+              its core experience:
+            </p>
+            <ul>
+              <li>Your selected application language.</li>
+              <li>Whether the introductory onboarding has been completed.</li>
+              <li>The Beautiful Names you add to favorites.</li>
+            </ul>
+            <p>
+              This information is not sent to the developer. You can change
+              these preferences inside the app. Removing the app removes its
+              locally stored application data from the device.
+            </p>
+          </section>
+
+          <section class="section">
+            <h2><span class="section-index">04</span>Feedback and support emails</h2>
+            <p>
+              Contacting support is optional and initiated by you. When you
+              choose a feedback topic, Isnad prepares an editable email draft
+              in your mail application. Nothing is sent automatically.
+            </p>
+            <p>
+              If you send a message, your email address and the information you
+              include are delivered through your chosen email provider. They
+              are used only to respond to your request, provide support, or
+              investigate a reported content correction. Support messages are
+              retained only as long as reasonably necessary for those purposes.
+            </p>
+          </section>
+
+          <section class="section">
+            <h2><span class="section-index">05</span>External links</h2>
+            <p>
+              Isnad may open cited sources or other external pages in your
+              browser. Those websites operate independently and are governed by
+              their own privacy policies. Isnad does not control their content
+              or data practices.
+            </p>
+          </section>
+
+          <section class="section">
+            <h2><span class="section-index">06</span>Sharing and disclosure</h2>
+            <p>
+              Isnad does not sell, rent, or share personal information with
+              advertisers or data brokers. Information is disclosed only when
+              you intentionally send an email, when required by applicable law,
+              or when necessary to protect legal rights and safety.
+            </p>
+          </section>
+
+          <section class="section">
+            <h2><span class="section-index">07</span>Children’s privacy</h2>
+            <p>
+              Isnad does not knowingly collect personal information from
+              children. The app’s core content can be used without creating an
+              account or providing personal details. A parent or guardian who
+              believes a child has sent personal information by email may
+              contact us to request its deletion.
+            </p>
+          </section>
+
+          <section class="section">
+            <h2><span class="section-index">08</span>Retention and deletion</h2>
+            <p>
+              On-device preferences remain until you change them or remove the
+              app. Support correspondence is retained only as long as needed to
+              address the request and maintain an appropriate record of content
+              corrections. You may request deletion of a support message by
+              contacting the address below.
+            </p>
+          </section>
+
+          <section class="section">
+            <h2><span class="section-index">09</span>Changes to this policy</h2>
+            <p>
+              This policy may be updated when the app’s features or legal
+              requirements change. The current version will always be
+              published on this page with its effective date.
+            </p>
+          </section>
+
+          <section class="contact-card">
+            <h2>Contact</h2>
+            <p>
+              For privacy questions, support requests, or deletion requests:
+            </p>
+            <a class="contact-link" href="mailto:isnadapp.support@gmail.com">
+              isnadapp.support@gmail.com
+            </a>
+          </section>
+        </div>
+      </article>
+
+      <article data-language-panel="ru" hidden>
+        <section class="hero">
+          <p class="eyebrow">Конфиденциальность и доверие</p>
+          <h1>Политика конфиденциальности</h1>
+          <p class="hero-description">
+            Isnad создан так, чтобы чтение и изучение материалов оставались
+            приватными. Приложение работает без учётной записи и не использует
+            рекламу, аналитику или технологии отслеживания.
+          </p>
+          <div class="privacy-badges" aria-label="Основные принципы">
+            <span class="privacy-badge">Без учётной записи</span>
+            <span class="privacy-badge">Без рекламы</span>
+            <span class="privacy-badge">Без отслеживания</span>
+          </div>
+          <p class="effective-date">Дата вступления в силу: 26 июля 2026 года</p>
+        </section>
+
+        <section class="summary-grid" aria-label="Краткое описание">
+          <article class="summary-card">
+            <span class="summary-number" aria-hidden="true">01</span>
+            <h2>Локальное хранение</h2>
+            <p>
+              Выбранный язык, состояние онбординга и избранные Имена остаются
+              в хранилище приложения на вашем устройстве.
+            </p>
+          </article>
+          <article class="summary-card">
+            <span class="summary-number" aria-hidden="true">02</span>
+            <h2>Вы управляете данными</h2>
+            <p>
+              Информация покидает приложение только когда вы сами открываете
+              внешнюю ссылку или отправляете письмо в поддержку.
+            </p>
+          </article>
+        </section>
+
+        <div class="policy">
+          <section class="section">
+            <h2><span class="section-index">01</span>Область действия</h2>
+            <p>
+              Эта Политика конфиденциальности применяется к приложению Isnad
+              для iOS и iPadOS. Она объясняет, какие сведения обрабатывает
+              приложение, для чего они используются, как долго хранятся и какие
+              возможности управления доступны пользователю.
+            </p>
+          </section>
+
+          <section class="section">
+            <h2><span class="section-index">02</span>Какие данные мы собираем</h2>
+            <p>
+              Isnad автоматически не собирает и не передаёт персональные данные.
+              Приложение не требует регистрации и не содержит сторонних
+              рекламных или аналитических SDK.
+            </p>
+            <ul>
+              <li>Нет рекламных идентификаторов и профилей отслеживания.</li>
+              <li>Нет доступа к геолокации, контактам, фото, микрофону или камере.</li>
+              <li>Нет аналитики использования или поведенческого профилирования.</li>
+              <li>Персональные данные не продаются и не передаются в аренду.</li>
+            </ul>
+          </section>
+
+          <section class="section">
+            <h2><span class="section-index">03</span>Данные на вашем устройстве</h2>
+            <p>
+              Для работы основных функций Isnad локально сохраняет небольшое
+              количество настроек:
+            </p>
+            <ul>
+              <li>Выбранный язык приложения.</li>
+              <li>Факт завершения первоначального онбординга.</li>
+              <li>Прекрасные Имена, добавленные вами в избранное.</li>
+            </ul>
+            <p>
+              Эти сведения не отправляются разработчику. Настройки можно
+              изменить внутри приложения. При удалении приложения его локальные
+              данные удаляются с устройства.
+            </p>
+          </section>
+
+          <section class="section">
+            <h2><span class="section-index">04</span>Обратная связь и поддержка</h2>
+            <p>
+              Обращение в поддержку необязательно и всегда инициируется вами.
+              При выборе темы Isnad подготавливает редактируемый черновик письма
+              в почтовом приложении. Ничего не отправляется автоматически.
+            </p>
+            <p>
+              Если вы отправите письмо, ваш адрес электронной почты и указанные
+              вами сведения будут переданы через выбранного почтового
+              провайдера. Они используются только для ответа, оказания поддержки
+              или проверки сообщения об ошибке в материалах. Письма хранятся
+              лишь столько, сколько разумно необходимо для этих целей.
+            </p>
+          </section>
+
+          <section class="section">
+            <h2><span class="section-index">05</span>Внешние ссылки</h2>
+            <p>
+              Isnad может открывать указанные источники или другие внешние
+              страницы в браузере. Эти сайты работают независимо и подчиняются
+              собственным политикам конфиденциальности. Isnad не контролирует
+              их содержание и порядок обработки данных.
+            </p>
+          </section>
+
+          <section class="section">
+            <h2><span class="section-index">06</span>Передача и раскрытие данных</h2>
+            <p>
+              Isnad не продаёт, не сдаёт в аренду и не передаёт персональные
+              данные рекламодателям или брокерам данных. Сведения раскрываются
+              только если вы намеренно отправляете письмо, если этого требует
+              применимое законодательство либо если это необходимо для защиты
+              законных прав и безопасности.
+            </p>
+          </section>
+
+          <section class="section">
+            <h2><span class="section-index">07</span>Конфиденциальность детей</h2>
+            <p>
+              Isnad намеренно не собирает персональные данные детей. Основными
+              функциями приложения можно пользоваться без учётной записи и
+              предоставления личных сведений. Родитель или опекун, считающий,
+              что ребёнок отправил личные данные по электронной почте, может
+              обратиться к нам с просьбой об удалении.
+            </p>
+          </section>
+
+          <section class="section">
+            <h2><span class="section-index">08</span>Хранение и удаление</h2>
+            <p>
+              Настройки на устройстве сохраняются, пока вы не измените их или
+              не удалите приложение. Переписка с поддержкой хранится только
+              столько, сколько необходимо для рассмотрения обращения и ведения
+              надлежащего учёта исправлений материалов. Вы можете запросить
+              удаление письма по адресу ниже.
+            </p>
+          </section>
+
+          <section class="section">
+            <h2><span class="section-index">09</span>Изменения политики</h2>
+            <p>
+              Политика может обновляться при изменении функций приложения или
+              требований законодательства. Актуальная версия всегда будет
+              опубликована на этой странице вместе с датой вступления в силу.
+            </p>
+          </section>
+
+          <section class="contact-card">
+            <h2>Связаться с нами</h2>
+            <p>
+              По вопросам конфиденциальности, поддержки или удаления данных:
+            </p>
+            <a class="contact-link" href="mailto:isnadapp.support@gmail.com">
+              isnadapp.support@gmail.com
+            </a>
+          </section>
+        </div>
+      </article>
+
+      <article data-language-panel="ar" lang="ar" dir="rtl" hidden>
+        <section class="hero">
+          <p class="eyebrow">الخصوصية والثقة</p>
+          <h1>سياسة الخصوصية</h1>
+          <p class="hero-description">
+            صُمّم تطبيق إسناد ليحافظ على خصوصية تجربة القراءة والدراسة.
+            يعمل التطبيق من دون حساب، ولا يستخدم الإعلانات أو تحليلات
+            الاستخدام أو تقنيات التتبع.
+          </p>
+          <div class="privacy-badges" aria-label="أبرز مبادئ الخصوصية">
+            <span class="privacy-badge">من دون حساب</span>
+            <span class="privacy-badge">من دون إعلانات</span>
+            <span class="privacy-badge">من دون تتبع</span>
+          </div>
+          <p class="effective-date">تاريخ السريان: 26 يوليو 2026</p>
+        </section>
+
+        <section class="summary-grid" aria-label="ملخص الخصوصية">
+          <article class="summary-card">
+            <span class="summary-number" aria-hidden="true">01</span>
+            <h2>محلي بطبيعته</h2>
+            <p>
+              تبقى اللغة المختارة وحالة شاشة البدء والأسماء المفضلة محفوظة
+              في مساحة التطبيق على جهازك.
+            </p>
+          </article>
+          <article class="summary-card">
+            <span class="summary-number" aria-hidden="true">02</span>
+            <h2>أنت صاحب القرار</h2>
+            <p>
+              لا تغادر المعلومات التطبيق إلا عندما تفتح رابطًا خارجيًا أو
+              ترسل رسالة دعم بإرادتك.
+            </p>
+          </article>
+        </section>
+
+        <div class="policy">
+          <section class="section">
+            <h2><span class="section-index">01</span>نطاق السياسة</h2>
+            <p>
+              تنطبق سياسة الخصوصية هذه على تطبيق إسناد لنظامي iOS وiPadOS.
+              وتوضح المعلومات التي يعالجها التطبيق، وسبب استخدامها، ومدة
+              الاحتفاظ بها، والخيارات المتاحة لك.
+            </p>
+          </section>
+
+          <section class="section">
+            <h2><span class="section-index">02</span>المعلومات التي نجمعها</h2>
+            <p>
+              لا يجمع إسناد المعلومات الشخصية أو يرسلها تلقائيًا. ولا يتطلب
+              التطبيق تسجيلًا، ولا يتضمن حِزمًا برمجية خارجية للإعلانات أو
+              تحليلات الاستخدام.
+            </p>
+            <ul>
+              <li>لا توجد معرّفات إعلانية أو ملفات تعريف للتتبع.</li>
+              <li>لا وصول إلى الموقع أو جهات الاتصال أو الصور أو الميكروفون أو الكاميرا.</li>
+              <li>لا تحليلات للاستخدام ولا إنشاء ملفات تعريف سلوكية.</li>
+              <li>لا بيع للمعلومات الشخصية ولا تأجير لها.</li>
+            </ul>
+          </section>
+
+          <section class="section">
+            <h2><span class="section-index">03</span>المعلومات المحفوظة على جهازك</h2>
+            <p>
+              يحفظ إسناد قدرًا محدودًا من التفضيلات محليًا لتوفير وظائفه
+              الأساسية:
+            </p>
+            <ul>
+              <li>لغة التطبيق التي اخترتها.</li>
+              <li>إتمام شاشات التعريف الأولية.</li>
+              <li>الأسماء الحسنى التي تضيفها إلى المفضلة.</li>
+            </ul>
+            <p>
+              لا تُرسل هذه المعلومات إلى المطوّر. ويمكنك تغيير هذه التفضيلات
+              داخل التطبيق. ويؤدي حذف التطبيق إلى إزالة بياناته المحلية من
+              الجهاز.
+            </p>
+          </section>
+
+          <section class="section">
+            <h2><span class="section-index">04</span>الملاحظات ورسائل الدعم</h2>
+            <p>
+              التواصل مع الدعم اختياري وتبدأه أنت. عند اختيار موضوع للملاحظات،
+              يُعدّ إسناد مسودة بريد قابلة للتعديل في تطبيق البريد لديك، ولا
+              يُرسل أي شيء تلقائيًا.
+            </p>
+            <p>
+              إذا أرسلت رسالة، فسيُنقل عنوان بريدك والمعلومات التي تدرجها عبر
+              مزوّد البريد الذي اخترته. وتُستخدم فقط للرد على طلبك أو تقديم
+              الدعم أو التحقق من تصحيح أبلغت عنه في المحتوى. ولا يُحتفظ برسائل
+              الدعم إلا للمدة المعقولة اللازمة لهذه الأغراض.
+            </p>
+          </section>
+
+          <section class="section">
+            <h2><span class="section-index">05</span>الروابط الخارجية</h2>
+            <p>
+              قد يفتح إسناد المصادر المذكورة أو صفحات خارجية أخرى في متصفحك.
+              تعمل تلك المواقع بصورة مستقلة وتخضع لسياسات الخصوصية الخاصة بها.
+              ولا يتحكم إسناد في محتواها أو ممارساتها المتعلقة بالبيانات.
+            </p>
+          </section>
+
+          <section class="section">
+            <h2><span class="section-index">06</span>مشاركة المعلومات والإفصاح عنها</h2>
+            <p>
+              لا يبيع إسناد المعلومات الشخصية ولا يؤجرها ولا يشاركها مع
+              المعلنين أو وسطاء البيانات. ولا يُفصح عن المعلومات إلا عندما
+              ترسل بريدًا بإرادتك، أو عندما يقتضي القانون المعمول به ذلك، أو
+              عند الضرورة لحماية الحقوق القانونية والسلامة.
+            </p>
+          </section>
+
+          <section class="section">
+            <h2><span class="section-index">07</span>خصوصية الأطفال</h2>
+            <p>
+              لا يجمع إسناد عن علم معلومات شخصية من الأطفال. ويمكن استخدام
+              المحتوى الأساسي من دون إنشاء حساب أو تقديم بيانات شخصية. ويجوز
+              للوالد أو الوصي الذي يعتقد أن طفلًا أرسل معلومات شخصية عبر البريد
+              أن يتواصل معنا لطلب حذفها.
+            </p>
+          </section>
+
+          <section class="section">
+            <h2><span class="section-index">08</span>الاحتفاظ والحذف</h2>
+            <p>
+              تبقى التفضيلات على الجهاز إلى أن تغيّرها أو تحذف التطبيق. ولا
+              يُحتفظ بمراسلات الدعم إلا للمدة اللازمة لمعالجة الطلب والاحتفاظ
+              بسجل مناسب لتصحيحات المحتوى. ويمكنك طلب حذف رسالة دعم عبر العنوان
+              أدناه.
+            </p>
+          </section>
+
+          <section class="section">
+            <h2><span class="section-index">09</span>التغييرات على هذه السياسة</h2>
+            <p>
+              قد تُحدّث هذه السياسة عند تغير ميزات التطبيق أو المتطلبات
+              القانونية. وستُنشر النسخة الحالية دائمًا في هذه الصفحة مع تاريخ
+              سريانها.
+            </p>
+          </section>
+
+          <section class="contact-card">
+            <h2>التواصل</h2>
+            <p>
+              لأسئلة الخصوصية أو طلبات الدعم أو طلبات الحذف:
+            </p>
+            <a class="contact-link" href="mailto:isnadapp.support@gmail.com" dir="ltr">
+              isnadapp.support@gmail.com
+            </a>
+          </section>
+        </div>
+      </article>
+    </main>
+
+    <footer>
+      <span>© 2026 Isnad</span>
+    </footer>
+  </div>
+
+  <script>
+    (() => {
+      const supportedLanguages = ["en", "ru", "ar"];
+      const buttons = [...document.querySelectorAll("[data-language]")];
+      const panels = [...document.querySelectorAll("[data-language-panel]")];
+      const queryLanguage = new URLSearchParams(window.location.search).get("lang");
+      const browserLanguage = navigator.language.slice(0, 2).toLowerCase();
+      const initialLanguage = supportedLanguages.includes(queryLanguage)
+        ? queryLanguage
+        : supportedLanguages.includes(browserLanguage)
+          ? browserLanguage
+          : "en";
+
+      function applyLanguage(language, updateAddress = false) {
+        const direction = language === "ar" ? "rtl" : "ltr";
+        document.documentElement.lang = language;
+        document.documentElement.dir = direction;
+
+        panels.forEach((panel) => {
+          panel.hidden = panel.dataset.languagePanel !== language;
+        });
+
+        buttons.forEach((button) => {
+          button.setAttribute(
+            "aria-pressed",
+            String(button.dataset.language === language)
+          );
+        });
+
+        if (updateAddress) {
+          const address = new URL(window.location.href);
+          address.searchParams.set("lang", language);
+          window.history.replaceState({}, "", address);
+        }
+      }
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+          applyLanguage(button.dataset.language, true);
+        });
+      });
+
+      applyLanguage(initialLanguage);
+    })();
+  </script>
+</body>
+</html>
